@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+// App.js
+import React from 'react';
+import './App.css'; 
 
-function App() {
+const Card = ({ title, content, imageUrl }) => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="card">
+      {imageUrl && <img src={imageUrl} alt={title} className="card-image" />}
+      <div className="card-body">
+        <h2 className="card-title">{title}</h2>
+        <p className="card-content">{content}</p>
+      </div>
     </div>
   );
-}
+};
+
+const App = () => {
+  return (
+    <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap' }}>
+      <Card
+        title="first card"
+        content="IEEE project.."
+        imageUrl="https://via.placeholder.com/300"
+      />
+      <Card
+        title="second card"
+        content="IEEE project."
+        imageUrl="https://via.placeholder.com/300"
+      />
+      <Card
+        title="Third Card"
+        content="IEEE project."
+        imageUrl="https://via.placeholder.com/300"
+      />
+    </div>
+  );
+};
 
 export default App;
