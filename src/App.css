@@ -1,4 +1,19 @@
 /* App.css */
+/*
+.Heading {
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.big-heading {
+  font-size: 4rem; 
+  font-weight: bold;
+  color: #333;
+  margin: 20px 0;
+}
+*/
+
+
 .card {
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -30,3 +45,4 @@
 .card-content {
   color: #555;
 }
+
